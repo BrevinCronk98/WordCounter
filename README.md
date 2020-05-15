@@ -1,12 +1,12 @@
 # _Brevins Word Counter_
 
-#### _This Program will count repeating words in a sentence and return the overall count for them." May 14th, 2020_
+#### _This Program counts repeating words in a sentence and returns the overall count of them." May 14th, 2020_
 
 #### By Brevin Cronk
 
 ## Description
 
-#### The purpose of this application was to practice Unitx Testing in C#, as well as practicing our coding in C#.
+#### The purpose of this application was to practice Unitx Testing in C#, as well as practicing our coding in C#. In this program the user will be prompted with entering in 2 words and a sentence, the program will then count how many times those 2 words appear in the sentence and will return them to the user and ask them if the want to do another set of words.
 
 ## Setup/Installation Requirements
 
@@ -23,17 +23,21 @@
 
 ## Specifications:
 
-#### User Can Input a word.
-* Input: "Word"
-* Output: "Word"
+#### User Can Input 2 Words.
+* Input: "Word" "Word2"
+* Output: "Your Words are: Word and Word2"
 
 #### User Can Input a Sentence.
 * Input: "Hello there my name is lily"
-* Output: "Hello there my name is lily"
+* Output: "Your sentence is: Hello there my name is lily"
 
 #### Program Will Count Words in Sentence
 * Input "The Big Big Black Cat Cat"
-* Output "Big: 2, Cat: 2"
+* Output "Big shows up 2 Times and Cat shows up 2 Times"
+
+#### Program Will Correctly Dispaly Proper Grammar for Return
+* Input: "WordOne = Lily, WordTwo = silly, Sentence = Lily is so silly, lily is the best."
+* Output: Lily Shows up  2 Times and Silly shows up 1 Time"
 
 
 ## Technologies Used

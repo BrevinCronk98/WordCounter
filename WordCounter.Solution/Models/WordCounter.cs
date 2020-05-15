@@ -54,10 +54,8 @@ namespace WordCounter.Models
                 {
                     counterTwo  += 1;
                 }
-        
             }
             return counterTwo;
         }
-
     }
 }
