@@ -7,3 +7,6 @@ C:\Users\cronk\desktop\WordCounter\WordCounter.Solution\bin\Debug\netcoreapp2.2\
 C:\Users\cronk\desktop\WordCounter\WordCounter.Solution\bin\Debug\netcoreapp2.2\WordCounter.pdb
 C:\Users\cronk\desktop\WordCounter\WordCounter.Solution\obj\Debug\netcoreapp2.2\WordCounter.dll
 C:\Users\cronk\desktop\WordCounter\WordCounter.Solution\obj\Debug\netcoreapp2.2\WordCounter.pdb
+C:\Users\cronk\desktop\WordCounter\WordCounter.Solution\bin\Debug\netcoreapp2.2\WordCounter.runtimeconfig.json
+C:\Users\cronk\desktop\WordCounter\WordCounter.Solution\bin\Debug\netcoreapp2.2\WordCounter.runtimeconfig.dev.json
+C:\Users\cronk\desktop\WordCounter\WordCounter.Solution\obj\Debug\netcoreapp2.2\WordCounter.genruntimeconfig.cache
