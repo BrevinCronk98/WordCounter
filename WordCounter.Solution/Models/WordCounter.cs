@@ -16,10 +16,11 @@ namespace WordCounter.Models
 
         public  int CountWords()
         {
+            string[] sentSplit = _sent.Split(' ');
             int counter = 0;
-            for(int i = 0; i < _sent.Length; i ++)
+            for(int i = 0; i < sentSplit.Length; i ++)
             {
-                if(_word == _sent)
+                if(_word == sentSplit[i])
                 {
                     counter += 1;
                 }
