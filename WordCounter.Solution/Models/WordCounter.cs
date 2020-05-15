@@ -20,12 +20,16 @@ namespace WordCounter.Models
             int counter = 0;
             for(int i = 0; i < sentSplit.Length; i ++)
             {
-                if(_word == sentSplit[i])
+                while (sentSplit[i].EndsWith(',') || sentSplit[i].EndsWith('?') || sentSplit[i].EndsWith('!') || sentSplit[i].EndsWith('.') || sentSplit[i].EndsWith(':') || sentSplit[i].EndsWith(';'))
+                {
+                   sentSplit[i] = sentSplit[i].Remove(sentSplit[i].Length - 1);
+                }
+                if(_word == sentSplit[i]) 
                 {
                     counter += 1;
-                }
+                } 
             }
-            return counter;
+          return counter;
         }
     }
 }
