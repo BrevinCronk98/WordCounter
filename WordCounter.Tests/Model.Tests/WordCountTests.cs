@@ -37,5 +37,21 @@ namespace WordCounter.TestTools
             UserInput myInput = new UserInput("sea", "Take a seat at the beach near the sea where the sea and the seat are both warm");
             Assert.AreEqual(2,myInput.CountWords());
         }
+
+        // Test Five
+        [TestMethod]
+        public void Logic_WillCountWordsThatEndWithCommonPunctuation_Counter()
+        {
+            UserInput myInput = new UserInput("seat", "Take a seat, Young Skywalker, seat, seat, seat");
+            Assert.AreEqual(4, myInput.CountWords());
+        }
+
+        // Test Six
+        [TestMethod]
+        public void Logic_WillNotCountWordThatAreIncorrect_Counter()
+        {
+            UserInput myInput = new UserInput("Hello", "Hello There, my name is !Hello, its so nice to ,Hello"); 
+            Assert.AreEqual(1, myInput.CountWords());
+        }
     }
 }
