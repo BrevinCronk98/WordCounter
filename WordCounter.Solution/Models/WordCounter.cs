@@ -18,18 +18,11 @@ namespace WordCounter.Models
         }
 
 
-        public int BothCounters()
-        {
-            CountFirstWord();
-            CountSecondWord();
-        }
-
         public  int CountFirstWord()
         {
             string[] sentSplit = _sent.Split(' ');
             CountWords newCounters = new CountWords();
             int counterOne = newCounters.GetCounterOne();
-            int counterTwo = newCounters.GetCounterTwo();
             for(int i = 0; i < sentSplit.Length; i ++)
             {
                 while (sentSplit[i].EndsWith(',') || sentSplit[i].EndsWith('?') || sentSplit[i].EndsWith('!') || sentSplit[i].EndsWith('.') || sentSplit[i].EndsWith(':') || sentSplit[i].EndsWith(';'))
@@ -42,7 +35,7 @@ namespace WordCounter.Models
                 }
         
             }
-            return (counterOne);
+            return counterOne;
         }
         
         

@@ -13,22 +13,23 @@ namespace WordCounter.TestTools
         [TestMethod]
         public void Constructor_CreatesObject_WordSent()
         {
-            UserInput myInput= new UserInput("Lily", "Lily is the best yes");
+            UserInput myInput= new UserInput("Lily", "lily", "Lily is the best yes");
             Assert.AreEqual(typeof(UserInput), myInput.GetType());
         }
         // Test Two
         [TestMethod]
         public void Logic_WillCorrectlyCountMatchingWords_Counter()
         {
-            UserInput myInput = new UserInput("Lily", "Lily Lily is the best best");
-            Assert.AreEqual(2,myInput.CountWords());
+            UserInput myInput = new UserInput("Lily","silly", "Lily Lily is silly the best best");
+            Assert.AreEqual(2,myInput.CountFirstWord());
+            Assert.AreEqual(1,myInput.CountSecondWord());
         }
 
         // Test Three
         [TestMethod]
         public void Logic_WillCorrectlyCountMatchedWordsWithCaseInsenitivity_Counter()
         {
-            UserInput myInput = new UserInput("bOb", "Bob is a really cool guy, BOB once told bOb that Bob");
+            UserInput myInput = new UserInput("bOb", "jeff", "Bob is a really cool guy, BOB once told jeff that Bob is jeff");
             Assert.AreEqual(4,myInput.CountWords());
         }
         // Test Four

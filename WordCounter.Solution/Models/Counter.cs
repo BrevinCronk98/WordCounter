@@ -13,7 +13,6 @@ namespace Counter.Models
         {
             _counterOne = 0;
             _counterTwo = 0;
-            _counterThree = 0;
         }
 
         public int GetCounterOne()
