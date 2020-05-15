@@ -10,7 +10,7 @@
 
 ## Setup/Installation Requirements
 
-* Clone My Repository
+* Clone My Repository at https://github.com/BrevinCronk98/WordCounter
 * Make Sure You Have .Net Installed on Your Machine
 * Open The Folder in Your Text Editor
 * Build in Console with Dotnet Build
