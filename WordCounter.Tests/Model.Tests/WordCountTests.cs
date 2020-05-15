@@ -7,7 +7,7 @@ using WordCounter.Models;
 namespace WordCounter.TestTools
 {
     [TestClass]
-    public class CounterChecks
+    public class WordCounterChecks
     {
         // Test One
         [TestMethod]
