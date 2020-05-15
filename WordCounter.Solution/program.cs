@@ -9,13 +9,13 @@ namespace WordCounter
         public static void Main()
         {
             start:
-            Console.WriteLine("Enter the Word You Want to Be Counted");
-            string inputWord = Console.ReadLine();
-            Console.WriteLine("Your Word is " + inputWord);
-            Console.WriteLine("Enter Your Sentence");
+            Console.WriteLine("Enter the First Word You Want Counted.");
+            string wordOne = Console.ReadLine();
+            Console.WriteLine("Enter Your Second Word!");
+            string wordTwo = Console.ReadLine();
+            Console.WriteLine("Enter You Sentence");
             string inputSent = Console.ReadLine();
-            Console.WriteLine(inputSent);
-            UserInput newInput = new UserInput(inputWord, inputSent);
+            UserInput newInput = new UserInput(wordOne, wordTwo, inputSent);
             int counter = newInput.CountWords();
             Console.WriteLine(inputWord + " Shows up " + counter + " Times!");
             Console.WriteLine("Do You Want To Do a New Word? Press 1, Y, or type Yes");

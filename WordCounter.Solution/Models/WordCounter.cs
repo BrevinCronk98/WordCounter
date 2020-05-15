@@ -1,35 +1,70 @@
 using System;
 using System.Collections.Generic;
+using Counter.Models;
 
 namespace WordCounter.Models
 {
     public class UserInput
     {
-        private string _word {get;set;}
+        private string _wordOne {get; set;}
+        private string _wordTwo {get; set;}
         private string _sent {get;set;}
         
-        public UserInput (string word, string sent)
+        public UserInput (string wordOne, string wordTwo, string sent)
         {
-            _word = word.ToLower();
+            _wordOne = wordOne.ToLower();
+            _wordTwo = wordTwo.ToLower();
             _sent = sent.ToLower();
         }
 
-        public  int CountWords()
+
+        public int BothCounters()
+        {
+            CountFirstWord();
+            CountSecondWord();
+        }
+
+        public  int CountFirstWord()
         {
             string[] sentSplit = _sent.Split(' ');
-            int counter = 0;
+            CountWords newCounters = new CountWords();
+            int counterOne = newCounters.GetCounterOne();
+            int counterTwo = newCounters.GetCounterTwo();
             for(int i = 0; i < sentSplit.Length; i ++)
             {
                 while (sentSplit[i].EndsWith(',') || sentSplit[i].EndsWith('?') || sentSplit[i].EndsWith('!') || sentSplit[i].EndsWith('.') || sentSplit[i].EndsWith(':') || sentSplit[i].EndsWith(';'))
                 {
                    sentSplit[i] = sentSplit[i].Remove(sentSplit[i].Length - 1);
                 }
-                if(_word == sentSplit[i]) 
+                if(_wordOne == sentSplit[i]) 
                 {
-                    counter += 1;
-                } 
+                    counterOne  += 1;
+                }
+        
             }
-          return counter;
+            return (counterOne);
         }
+        
+        
+        public  int CountSecondWord()
+        {
+            string[] sentSplit = _sent.Split(' ');
+            CountWords newCounters = new CountWords();
+            int counterTwo = newCounters.GetCounterTwo();
+            for(int i = 0; i < sentSplit.Length; i ++)
+            {
+                while (sentSplit[i].EndsWith(',') || sentSplit[i].EndsWith('?') || sentSplit[i].EndsWith('!') || sentSplit[i].EndsWith('.') || sentSplit[i].EndsWith(':') || sentSplit[i].EndsWith(';'))
+                {
+                   sentSplit[i] = sentSplit[i].Remove(sentSplit[i].Length - 1);
+                }
+                if(_wordTwo == sentSplit[i]) 
+                {
+                    counterTwo  += 1;
+                }
+        
+            }
+            return counterTwo;
+        }
+
     }
 }
